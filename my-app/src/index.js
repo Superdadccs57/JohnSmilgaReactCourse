@@ -1,23 +1,23 @@
-import React from 'react'
-import ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom/client' //This is React 18 syntax
+const container = document.getElementById('root');
+const root = createRoot(container);
 
-// JSX Rules
-// return single element
-// div / section / article or fragment
-// use camelCase for html attributes
-// className instead of class
-// close every element
-// formatting
-
+// Nested Components, React Tools
 
 function Greeting() {
   return (
     <div>
-      <h1>This Heading is nested in a <code>div</code> </h1>
+      <h1>So you can create componets outside of the greeting component and then use them inside of any component you want! Pretty Cool </h1>
+      <Person />
+      <Message />
     </div>
   );  
 }
 
+const Person = () => <h2>Thomas Fentie</h2>;
+const Message = () => {
+  return <p>Hi I am learning React</p>
+}
 
 
-ReactDOM.render(<Greeting/>,document.getElementById('root'))
+root.render(<Greeting />);
