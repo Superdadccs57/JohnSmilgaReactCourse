@@ -1,10 +1,13 @@
 import React from 'react'
 import ReactDOM from 'react-dom';
 
-// stateless functional component
-// always  need to return the JSX
-// |
-// V
+// JSX Rules
+// return single element
+// div / section / article or fragment
+// use camelCase for html attributes
+// className instead of class
+// close every element
+// formatting
 
 
 function Greeting() {
@@ -15,10 +18,6 @@ function Greeting() {
   );  
 }
 
-// The method below works well for normal html, however will become very messy when introducing nested elements, Like the above code
 
-// const Greeting = () => {
-//   return React.createElement('h1', {}, 'Hello World!');
-// }
 
 ReactDOM.render(<Greeting/>,document.getElementById('root'))
