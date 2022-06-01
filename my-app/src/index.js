@@ -4,20 +4,30 @@ const root = createRoot(container);
 
 // Nested Components, React Tools
 
-function Greeting() {
-  return (
-    <div>
-      <h1>So you can create componets outside of the greeting component and then use them inside of any component you want! Pretty Cool </h1>
-      <Person />
-      <Message />
-    </div>
-  );  
+function BookList() {
+  return <section>
+    <Book />
+  </section>;
 }
 
-const Person = () => <h2>Thomas Fentie</h2>;
-const Message = () => {
-  return <p>Hi I am learning React</p>
+const Book = () => {
+  return <article>
+    <Image />
+    <Title />
+    <Author/>
+  </article>
 }
 
+const Image = () => (
+  <img
+    src="https://m.media-amazon.com/images/I/81TFRojp+uL._AC_UY218_.jpg"
+    alt="Wheel of Time Boxset"
+  />
+);
 
-root.render(<Greeting />);
+const Title = () => <h1>Wheel of Time Box Set</h1>;
+const Author = () => <h4>Robert Jordan / Brandon Sanderson</h4>
+
+
+
+root.render(<BookList />);
