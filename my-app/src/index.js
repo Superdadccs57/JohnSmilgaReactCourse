@@ -6,29 +6,44 @@ const container = document.getElementById('root');
 const root = createRoot(container);
 
 // Nested Components, React Tools
-
-
+// Setup Vars
+const firstBook = {
+  img: 'https://m.media-amazon.com/images/I/81TFRojp+uL._AC_UY218_.jpg',
+  title: 'Wheel of Time Box Set',
+  author: 'Robert Jordan / Brandon Sanderson',
+  altText: 'Wheel of Time Boxset',
+};
+const secondBook = {
+  img: 'https://m.media-amazon.com/images/I/51WEFBk27LL._AC_UY218_.jpg',
+  title: 'Options Trading For Dummies',
+  author: 'by Joe Duarte',
+  altText: 'Options Trading for Dummies',
+};
 
 function BookList() {
   return (
-    <section className='booklist'>
-      <Book />
+    <section className="booklist">
+      <Book
+        img={firstBook.img}
+        title={firstBook.title}
+        author={firstBook.author}
+        altText={firstBook.altText}
+      />
+      <Book
+        img={secondBook.img}
+        title={secondBook.title}
+        author={secondBook.author}
+        altText={secondBook.altText}
+      />
     </section>
   );
 }
-const author = 'Robert Jordan / Brandon Sanderson';
-const Book = () => {
-  const title = 'Wheel of Time Box Set';
+const Book = (props) => {
   return (
     <article className="book">
-      <img
-        src="https://m.media-amazon.com/images/I/81TFRojp+uL._AC_UY218_.jpg"
-        alt="Wheel of Time Boxset"
-      />
-
-      <h1>{title}</h1>
-      <h4>{author.toUpperCase()}</h4>
-      {/* <p>{ let x = 6}</p> cannot have a statment, needs to return a value*/}
+      <img src={props.img} alt={props.altText} />
+      <h1>{props.title}</h1>
+      <h4>{props.author}</h4>
     </article>
   );
 }
