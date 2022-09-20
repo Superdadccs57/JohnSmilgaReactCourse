@@ -8,7 +8,6 @@ const root = createRoot(container);
 // Nested Components, React Tools
 // Setup Vars
 const books = [
-
   {
     img: 'https://m.media-amazon.com/images/I/81TFRojp+uL._AC_UY218_.jpg',
     title: 'Wheel of Time Box Set',
@@ -22,22 +21,27 @@ const books = [
     author: 'by Joe Duarte',
     altText: 'Options Trading for Dummies',
   },
-]
+  {
+    img: 'https://m.media-amazon.com/images/I/81H03VyZLSL._AC_UY218_.jpg',
+    title: 'Technical Analysis For Dummies',
+    author: 'by Barbara Rockerfella',
+    altText: 'Technical Analysis For Dummies',
+  },
+];
 
-const names = ['john', 'peter', 'susan']
-const newName = names.map((name) => {
-  return <h1>{name}</h1>
-});
-console.log(newName)
 function BookList() {
   return (
     <section className="booklist">
-      {newName}
+      {books.map((book) => {
+        return( 
+        <Book book={book}></Book>
+        )
+      })}
     </section>
   );
 }
-const Book = ({img,title,author,altText}) => {
-  // const {img, title, author} = props
+const Book = (props) => {
+  const {img, title, author,altText} = props.book
   return (
     <article className="book">
       <img src={img} alt={altText} />
