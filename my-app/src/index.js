@@ -16,21 +16,21 @@ function BookList() {
     </section>
   );
 }
-
+const author = 'Robert Jordan / Brandon Sanderson';
 const Book = () => {
-  return <article className='book'>
-    
-    <img
+  const title = 'Wheel of Time Box Set';
+  return (
+    <article className="book">
+      <img
         src="https://m.media-amazon.com/images/I/81TFRojp+uL._AC_UY218_.jpg"
         alt="Wheel of Time Boxset"
       />
-    
-    
-  <h1>Wheel of Time Box Set</h1>
-    
-    
-    <h4>Robert Jordan / Brandon Sanderson</h4>
-  </article>
+
+      <h1>{title}</h1>
+      <h4>{author.toUpperCase()}</h4>
+      {/* <p>{ let x = 6}</p> cannot have a statment, needs to return a value*/}
+    </article>
+  );
 }
 
 
