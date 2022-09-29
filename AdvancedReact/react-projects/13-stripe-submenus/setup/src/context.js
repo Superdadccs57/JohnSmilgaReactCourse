@@ -15,13 +15,13 @@ export const AppProvider = ({ children }) => {
         setIsSidebarOpen(true)
     }
     const closeSidebar = () => {
-     
+     setIsSidebarOpen(false)
     };
     const openSubmenu = () => {
       setIsSubmenuOpen(true);
     };
     const closeSubmenu = () => {
-      
+      setIsSubmenuOpen(false)
     };
     return <AppContext.Provider value={{isSubmenuOpen,isSidebarOpen,openSubmenu,openSidebar,closeSubmenu,closeSidebar}}>
         {children}
