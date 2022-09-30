@@ -7,7 +7,7 @@ export const AppProvider = ({ children }) => {
     // State Values
     const [isSidebarOpen, setIsSidebarOpen] = useState(true);
     const [isSubmenuOpen, setIsSubmenuOpen] = useState(false);
-   
+   const [location, setLocation] = useState({})
    
 
     // Functions
@@ -17,13 +17,14 @@ export const AppProvider = ({ children }) => {
     const closeSidebar = () => {
      setIsSidebarOpen(false)
     };
-    const openSubmenu = () => {
+  const openSubmenu = (text, coordinates) => {
+      setLocation(coordinates)
       setIsSubmenuOpen(true);
     };
     const closeSubmenu = () => {
       setIsSubmenuOpen(false)
     };
-    return <AppContext.Provider value={{isSubmenuOpen,isSidebarOpen,openSubmenu,openSidebar,closeSubmenu,closeSidebar}}>
+    return <AppContext.Provider value={{isSubmenuOpen,isSidebarOpen,openSubmenu,openSidebar,closeSubmenu,closeSidebar,location,}}>
         {children}
     </AppContext.Provider>
 }
