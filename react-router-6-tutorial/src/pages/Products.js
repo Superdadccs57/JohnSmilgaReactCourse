@@ -4,8 +4,6 @@ const Products = () => {
     <>
       <section className="section">
         <h2>products</h2>
-        <Link to='/' className='btn'>Back Home</Link>
-        <Link to='/about' className='btn'>About</Link>
       </section>
     </>
   );
