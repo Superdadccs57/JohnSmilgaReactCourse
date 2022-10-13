@@ -1,24 +1,25 @@
-import React from 'react'
-import ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom/client' //This is React 18 syntax
+// CSS
+import './index.css'
+// Book Array
+import {data} from './books'
+// Book Component
+import Book from './book'
 
-// stateless functional component
-// always  need to return the JSX
-// |
-// V
+const container = document.getElementById('root');
+const root = createRoot(container);
 
-
-function Greeting() {
+function BookList() {
   return (
-    <div>
-      <h1>This Heading is nested in a <code>div</code> </h1>
-    </div>
-  );  
+    <section className="booklist">
+      {data.map((book) => {
+        return( 
+          <Book key={book.id} {...book}></Book>
+        )
+      })}
+    </section>
+  );
 }
 
-// The method below works well for normal html, however will become very messy when introducing nested elements, Like the above code
-
-// const Greeting = () => {
-//   return React.createElement('h1', {}, 'Hello World!');
-// }
-
-ReactDOM.render(<Greeting/>,document.getElementById('root'))
+// Rendering the Page in the browser
+root.render(<BookList />);
