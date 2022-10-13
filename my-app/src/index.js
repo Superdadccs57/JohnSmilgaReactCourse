@@ -1,23 +1,25 @@
 import { createRoot } from 'react-dom/client' //This is React 18 syntax
+// CSS
+import './index.css'
+// Book Array
+import {data} from './books'
+// Book Component
+import Book from './book'
+
 const container = document.getElementById('root');
 const root = createRoot(container);
 
-// Nested Components, React Tools
-
-function Greeting() {
+function BookList() {
   return (
-    <div>
-      <h1>So you can create componets outside of the greeting component and then use them inside of any component you want! Pretty Cool </h1>
-      <Person />
-      <Message />
-    </div>
-  );  
+    <section className="booklist">
+      {data.map((book) => {
+        return( 
+          <Book key={book.id} {...book}></Book>
+        )
+      })}
+    </section>
+  );
 }
 
-const Person = () => <h2>Thomas Fentie</h2>;
-const Message = () => {
-  return <p>Hi I am learning React</p>
-}
-
-
-root.render(<Greeting />);
+// Rendering the Page in the browser
+root.render(<BookList />);
