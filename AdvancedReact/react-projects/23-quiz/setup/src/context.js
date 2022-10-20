@@ -1,5 +1,5 @@
 import axios from "axios";
-import React, { useState, useContext, useEffect } from "react";
+import React, { useState, useContext } from "react";
 
 const table = {
 	sports: 21,
@@ -9,9 +9,7 @@ const table = {
 
 const API_ENDPOINT = "https://opentdb.com/api.php?";
 
-const url = "";
-const tempUrl =
-	"https://opentdb.com/api.php?amount=10&category=21&difficulty=easy&type=multiple";
+
 
 const AppContext = React.createContext();
 
@@ -22,11 +20,11 @@ const AppProvider = ({ children }) => {
 	const [index, setIndex] = useState(0);
 	const [correct, setCorrect] = useState(0);
 	const [error, setError] = useState(false);
-  const [quiz, setQuiz] = useState({
-    amount:10,
-    category:'sports',
-    difficulty:'easy'
-  })
+	const [quiz, setQuiz] = useState({
+		amount: 10,
+		category: "sports",
+		difficulty: "easy",
+	});
 
 	const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -53,7 +51,7 @@ const AppProvider = ({ children }) => {
 		setIndex((oldIndex) => {
 			const index = oldIndex + 1;
 			if (index > questions.length - 1) {
-				openModal()
+				openModal();
 				return 0;
 			} else {
 				return index;
@@ -68,25 +66,30 @@ const AppProvider = ({ children }) => {
 		nextQuestion();
 	};
 
-  const openModal = () =>{
-    setIsModalOpen(true)
-  }
+	const openModal = () => {
+		setIsModalOpen(true);
+	};
 
-  const closeModal = () =>{
-    setWaiting(true)
-    setCorrect(0)
-    setIsModalOpen(false)
-  }
+	const closeModal = () => {
+		setWaiting(true);
+		setCorrect(0);
+		setIsModalOpen(false);
+	};
 
-	const handleChange = (e)=>{
-    const name = e.target.name
-    const value = e.target.value
-setQuiz({...quiz, [name]:value})
-  }
+	const handleChange = (e) => {
+		const name = e.target.name;
+		const value = e.target.value;
+		setQuiz({ ...quiz, [name]: value });
+	};
 
-  const handleSubmit = (e) => {
-    e.preventDefault()
-  }
+	const handleSubmit = (e) => {
+		e.preventDefault();
+		const { amount, category, difficulty } = quiz;
+
+		const url = `${API_ENDPOINT}amount=${amount}&category=${table[category]}&difficulty=${difficulty}&type=multiple`;
+		fetchQuestions(url);
+    
+	};
 
 	return (
 		<AppContext.Provider
@@ -100,10 +103,10 @@ setQuiz({...quiz, [name]:value})
 				isModalOpen,
 				nextQuestion,
 				checkAnswer,
-        closeModal,
-        quiz,
-        handleChange,
-        handleSubmit
+				closeModal,
+				quiz,
+				handleChange,
+				handleSubmit,
 			}}>
 			{children}
 		</AppContext.Provider>
