@@ -4,8 +4,10 @@ import Card from './Card';
 import Followers from './Followers';
 const User = () => {
   return <section className='section'>
+    <Wrapper>
     <Card></Card>
     <Followers></Followers>
+    </Wrapper>
   </section>;
 };
 
