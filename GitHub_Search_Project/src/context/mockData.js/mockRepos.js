@@ -23,7 +23,7 @@ export default [
 				"https://api.github.com/users/Superdadccs57/subscriptions",
 			organizations_url: "https://api.github.com/users/Superdadccs57/orgs",
 			repos_url: "https://api.github.com/users/Superdadccs57/repos",
-			events_ur: "https://api.github.com/users/Superdadccs57/events{/privacy}",
+			events_url: "https://api.github.com/users/Superdadccs57/events{/privacy}",
 			received_events_url:
 				"https://api.github.com/users/Superdadccs57/received_events",
 			type: "User",
@@ -131,6 +131,147 @@ export default [
 		open_issues: 0,
 		watchers: 0,
 		default_branch: "master",
+	},
+	{
+		id: 556824575,
+		node_id: "R_kgDOITB3_w",
+		name: "Calendar_App",
+		full_name: "Superdadccs57/Calendar_App",
+		private: false,
+		owner: {
+			login: "Superdadccs57",
+			id: 79618795,
+			node_id: "MDQ6VXNlcjc5NjE4Nzk1",
+			avatar_url: "https://avatars.githubusercontent.com/u/79618795?v=4",
+			gravatar_id: "",
+			url: "https://api.github.com/users/Superdadccs57",
+			html_url: "https://github.com/Superdadccs57",
+			followers_url: "https://api.github.com/users/Superdadccs57/followers",
+			following_url:
+				"https://api.github.com/users/Superdadccs57/following{/other_user}",
+			gists_url: "https://api.github.com/users/Superdadccs57/gists{/gist_id}",
+			starred_url:
+				"https://api.github.com/users/Superdadccs57/starred{/owner}{/repo}",
+			subscriptions_url:
+				"https://api.github.com/users/Superdadccs57/subscriptions",
+			organizations_url: "https://api.github.com/users/Superdadccs57/orgs",
+			repos_url: "https://api.github.com/users/Superdadccs57/repos",
+			events_url: "https://api.github.com/users/Superdadccs57/events{/privacy}",
+			received_events_url:
+				"https://api.github.com/users/Superdadccs57/received_events",
+			type: "User",
+			site_admin: false,
+		},
+		html_url: "https://github.com/Superdadccs57/Calendar_App",
+		description: "Future Component for a client app",
+		fork: false,
+		url: "https://api.github.com/repos/Superdadccs57/Calendar_App",
+		forks_url: "https://api.github.com/repos/Superdadccs57/Calendar_App/forks",
+		keys_url:
+			"https://api.github.com/repos/Superdadccs57/Calendar_App/keys{/key_id}",
+		collaborators_url:
+			"https://api.github.com/repos/Superdadccs57/Calendar_App/collaborators{/collaborator}",
+		teams_url: "https://api.github.com/repos/Superdadccs57/Calendar_App/teams",
+		hooks_url: "https://api.github.com/repos/Superdadccs57/Calendar_App/hooks",
+		issue_events_url:
+			"https://api.github.com/repos/Superdadccs57/Calendar_App/issues/events{/number}",
+		events_url:
+			"https://api.github.com/repos/Superdadccs57/Calendar_App/events",
+		assignees_url:
+			"https://api.github.com/repos/Superdadccs57/Calendar_App/assignees{/user}",
+		branches_url:
+			"https://api.github.com/repos/Superdadccs57/Calendar_App/branches{/branch}",
+		tags_url: "https://api.github.com/repos/Superdadccs57/Calendar_App/tags",
+		blobs_url:
+			"https://api.github.com/repos/Superdadccs57/Calendar_App/git/blobs{/sha}",
+		git_tags_url:
+			"https://api.github.com/repos/Superdadccs57/Calendar_App/git/tags{/sha}",
+		git_refs_url:
+			"https://api.github.com/repos/Superdadccs57/Calendar_App/git/refs{/sha}",
+		trees_url:
+			"https://api.github.com/repos/Superdadccs57/Calendar_App/git/trees{/sha}",
+		statuses_url:
+			"https://api.github.com/repos/Superdadccs57/Calendar_App/statuses/{sha}",
+		languages_url:
+			"https://api.github.com/repos/Superdadccs57/Calendar_App/languages",
+		stargazers_url:
+			"https://api.github.com/repos/Superdadccs57/Calendar_App/stargazers",
+		contributors_url:
+			"https://api.github.com/repos/Superdadccs57/Calendar_App/contributors",
+		subscribers_url:
+			"https://api.github.com/repos/Superdadccs57/Calendar_App/subscribers",
+		subscription_url:
+			"https://api.github.com/repos/Superdadccs57/Calendar_App/subscription",
+		commits_url:
+			"https://api.github.com/repos/Superdadccs57/Calendar_App/commits{/sha}",
+		git_commits_url:
+			"https://api.github.com/repos/Superdadccs57/Calendar_App/git/commits{/sha}",
+		comments_url:
+			"https://api.github.com/repos/Superdadccs57/Calendar_App/comments{/number}",
+		issue_comment_url:
+			"https://api.github.com/repos/Superdadccs57/Calendar_App/issues/comments{/number}",
+		contents_url:
+			"https://api.github.com/repos/Superdadccs57/Calendar_App/contents/{+path}",
+		compare_url:
+			"https://api.github.com/repos/Superdadccs57/Calendar_App/compare/{base}...{head}",
+		merges_url:
+			"https://api.github.com/repos/Superdadccs57/Calendar_App/merges",
+		archive_url:
+			"https://api.github.com/repos/Superdadccs57/Calendar_App/{archive_format}{/ref}",
+		downloads_url:
+			"https://api.github.com/repos/Superdadccs57/Calendar_App/downloads",
+		issues_url:
+			"https://api.github.com/repos/Superdadccs57/Calendar_App/issues{/number}",
+		pulls_url:
+			"https://api.github.com/repos/Superdadccs57/Calendar_App/pulls{/number}",
+		milestones_url:
+			"https://api.github.com/repos/Superdadccs57/Calendar_App/milestones{/number}",
+		notifications_url:
+			"https://api.github.com/repos/Superdadccs57/Calendar_App/notifications{?since,all,participating}",
+		labels_url:
+			"https://api.github.com/repos/Superdadccs57/Calendar_App/labels{/name}",
+		releases_url:
+			"https://api.github.com/repos/Superdadccs57/Calendar_App/releases{/id}",
+		deployments_url:
+			"https://api.github.com/repos/Superdadccs57/Calendar_App/deployments",
+		created_at: "2022-10-24T15:27:17Z",
+		updated_at: "2022-10-24T15:46:10Z",
+		pushed_at: "2022-10-24T15:53:42Z",
+		git_url: "git://github.com/Superdadccs57/Calendar_App.git",
+		ssh_url: "git@github.com:Superdadccs57/Calendar_App.git",
+		clone_url: "https://github.com/Superdadccs57/Calendar_App.git",
+		svn_url: "https://github.com/Superdadccs57/Calendar_App",
+		homepage: null,
+		size: 312,
+		stargazers_count: 0,
+		watchers_count: 0,
+		language: "JavaScript",
+		has_issues: true,
+		has_projects: true,
+		has_downloads: true,
+		has_wiki: true,
+		has_pages: false,
+		forks_count: 0,
+		mirror_url: null,
+		archived: false,
+		disabled: false,
+		open_issues_count: 0,
+		license: {
+			key: "mit",
+			name: "MIT License",
+			spdx_id: "MIT",
+			url: "https://api.github.com/licenses/mit",
+			node_id: "MDc6TGljZW5zZTEz",
+		},
+		allow_forking: true,
+		is_template: false,
+		web_commit_signoff_required: false,
+		topics: [],
+		visibility: "public",
+		forks: 0,
+		open_issues: 0,
+		watchers: 0,
+		default_branch: "main",
 	},
 	{
 		id: 427186877,
@@ -378,13 +519,13 @@ export default [
 			"https://api.github.com/repos/Superdadccs57/JohnSmilgaReactCourse/deployments",
 		created_at: "2022-05-25T03:34:26Z",
 		updated_at: "2022-10-20T19:33:23Z",
-		pushed_at: "2022-10-20T19:38:33Z",
+		pushed_at: "2022-10-22T22:08:00Z",
 		git_url: "git://github.com/Superdadccs57/JohnSmilgaReactCourse.git",
 		ssh_url: "git@github.com:Superdadccs57/JohnSmilgaReactCourse.git",
 		clone_url: "https://github.com/Superdadccs57/JohnSmilgaReactCourse.git",
 		svn_url: "https://github.com/Superdadccs57/JohnSmilgaReactCourse",
 		homepage: null,
-		size: 4464,
+		size: 4473,
 		stargazers_count: 0,
 		watchers_count: 0,
 		language: "JavaScript",
@@ -543,7 +684,7 @@ export default [
 		allow_forking: true,
 		is_template: false,
 		web_commit_signoff_required: false,
-		topics: [],
+		topics: ["config", "github-config"],
 		visibility: "public",
 		forks: 0,
 		open_issues: 0,
