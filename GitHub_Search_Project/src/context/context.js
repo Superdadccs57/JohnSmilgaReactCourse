@@ -17,47 +17,60 @@ const GithubProvider = ({ children }) => {
 
 	// requests loading
 	const [requests, setRequest] = useState(0);
-	const [loading, setIsLoading] = useState(false);
+	const [isLoading, setIsLoading] = useState(false);
 
 	// error
-	const [error,setError] =useState({show:false,msg:''})
+	const [error, setError] = useState({ show: false, msg: "" });
 
-	const searchGithubUser = async(user)=>{
-		toggleError()
-		// setLoading(true)
-		const response = await axios(`${rootUrl}/users/${user}`).catch(err => console.log(err))
+	const searchGithubUser = async (user) => {
+		toggleError();
+		setIsLoading(true);
+		const response = await axios(`${rootUrl}/users/${user}`).catch((err) =>
+			console.log(err)
+		);
 		console.log(response);
-		if(response){
-			setGithubUser(response.data)
+		if (response) {
+			setGithubUser(response.data);
 		} else {
-			toggleError(true,'there is no user with that user name')
+			toggleError(true, "there is no user with that user name");
 		}
-	}
+		checkRequests()
+		setIsLoading(false)
+	};
 	//check rate
 	const checkRequests = () => {
 		axios(`${rootUrl}/rate_limit`)
-			.then(({data}) => {
+			.then(({ data }) => {
 				let {
 					rate: { remaining },
 				} = data;
-				setRequest(remaining)
-				if(remaining === 0){
+				setRequest(remaining);
+				if (remaining === 0) {
 					// throw error
-					toggleError(true,'sorry you have exceeded your hourly rate limit')
+					toggleError(true, "sorry you have exceeded your hourly rate limit");
 				}
 			})
 			.catch((err) => console.log(err));
 	};
 
 	// error
-	function toggleError(show = false,msg = ''){
-		setError({show,msg})
+	function toggleError(show = false, msg = "") {
+		setError({ show, msg });
 	}
 
 	useEffect(checkRequests, []);
 
 	return (
-		<GithubContext.Provider value={{ githubUser, repos, followers, requests, error, searchGithubUser }}>
+		<GithubContext.Provider
+			value={{
+				githubUser,
+				repos,
+				followers,
+				requests,
+				error,
+				searchGithubUser,
+				isLoading,
+			}}>
 			{children}
 		</GithubContext.Provider>
 	);
