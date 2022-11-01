@@ -43,7 +43,7 @@ const GithubProvider = ({ children }) => {
 				if(followers.status === status) {
 					setFollowers(followers.value.data)
 				}
-			})
+			}).catch(console.log(error))
 			
 		} else {
 			toggleError(true, "there is no user with that user name");
