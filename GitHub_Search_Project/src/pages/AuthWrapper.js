@@ -12,6 +12,7 @@ function AuthWrapper({ children }) {
 		);
 	}
 	if (error) {
+		return <h1>Oops something went wrong</h1>;
 	}
 
 	return <>{children}</>;
