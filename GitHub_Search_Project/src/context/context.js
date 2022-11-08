@@ -30,6 +30,7 @@ const GithubProvider = ({ children }) => {
 		);
 		if (response) {
 			setGithubUser(response.data);
+			// eslint-disable-next-line
 			const { login, followers_url } = response.data;
 			await Promise.allSettled([
 				axios(`${rootUrl}/users/${login}/repos?per_page=100`),
